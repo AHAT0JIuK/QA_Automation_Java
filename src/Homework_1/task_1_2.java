@@ -6,7 +6,7 @@ public class task_1_2 {
 
         byte n = 10;
 
-        System.out.println("Сумма цифр двузначного числа n = " + (n/10 + n % 10));
+        System.out.println("Сумма цифр двузначного числа n = " + (n / 10 + n % 10));
     }
 
 }
