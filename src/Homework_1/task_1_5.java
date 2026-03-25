@@ -7,7 +7,7 @@ public class task_1_5 {
         byte q = 5;
         byte w = 10;
 
-        System.out.println("Остаток от деления q = " + q + " на w = " + w + " равен " + (q  % w));
+        System.out.println("Остаток от деления q = " + q + " на w = " + w + " равен " + (q % w));
     }
 
 }
