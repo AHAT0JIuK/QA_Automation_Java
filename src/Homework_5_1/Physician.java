@@ -14,26 +14,29 @@ package Homework_5_1;
 
 public class Physician extends Clinic {
 
-    public void appointment(int treatmentPlan) {
+    public void appointment(Patient patient) {
         Surgeon surgeon = new Surgeon();
         Dentist dentist = new Dentist();
         Physician physician = new Physician();
-        if (treatmentPlan == 1) {
+        if (patient.treatmentPlan == 1) {
             System.out.println("Назначаю Вам хирурга");
             surgeon.treat();
+            patient.appointedDoctor = "Хирург";
         }
-        if (treatmentPlan == 2) {
+        if (patient.treatmentPlan == 2) {
             System.out.println("Назначаю Вам дантиста");
             dentist.treat();
+            patient.appointedDoctor = "Дантист";
         }
-        if (treatmentPlan != 1 & treatmentPlan != 2) {
+        if (patient.treatmentPlan != 1 & patient.treatmentPlan != 2) {
             System.out.println("Назначаю Вам терапевта");
             physician.treat();
+            patient.appointedDoctor = "Терапевт";
         }
     }
 
     @Override
     public void treat() {
-        System.out.println("Терапвет диагностирует и лечит широкий спектр заболеваний внутренних органов, не требующих хирургического вмешательства.\nЛечение включает сбор анамнеза, осмотр (прослушивание, пальпацию), назначение анализов (кровь, моча, УЗИ)\nи назначение лекарств или направление к узким специалистам.");
+        System.out.println("Терапевт диагностирует и лечит широкий спектр заболеваний внутренних органов, не требующих хирургического вмешательства.\nЛечение включает сбор анамнеза, осмотр (прослушивание, пальпацию), назначение анализов (кровь, моча, УЗИ)\nи назначение лекарств или направление к узким специалистам.");
     }
 }

@@ -19,9 +19,10 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         Patient patient = new Patient();
-        Physician physician = new Physician();
-        // при генерации 1 назначается хирург, при генерации 2 назначается дантист, при генерации 0 или числа от 3 до 9 назначается терапевт
         patient.treatmentPlan = random.nextInt(10);
-        physician.appointment(patient.treatmentPlan);
+        Physician physician = new Physician();
+        physician.appointment(patient);
+        // при генерации 1 назначается хирург, при генерации 2 назначается дантист, при генерации 0 или числа от 3 до 9 назначается терапевт
+        System.out.println("У пациента план лечения № " + patient.treatmentPlan + "\n" + "Пациенту назначен " + patient.appointedDoctor);
     }
 }

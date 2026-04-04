@@ -12,6 +12,7 @@ package Homework_5_1;
 Если план лечения имеет любой другой код – назначить терапевта и выполнить метод лечить.
 */
 
-public class Patient extends Clinic {
+public class Patient {
     int treatmentPlan;
+    String appointedDoctor;
 }
