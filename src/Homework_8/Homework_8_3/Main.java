@@ -32,12 +32,12 @@ public class Main {
         String[] supportArray = supportCollection.toArray(new String[sizeSupportCollection]);
         // вычисление размера вспомогательного массива
         int sizeSupportArray = supportArray.length;
-        // заполнние и вывод итоговой хэш-мапы
+        // заполнение и вывод итоговой хэш-мапы
         Map<String, Boolean> doubleMap = new HashMap<>();
         int countDouble = 0;
         for (int i = 0; i < sizeSupportArray; i++) {
             for (int j = 0; j < lengthArray; j++) {
-                if (supportArray[i].contains(wordMultiple[j])) {
+                if (supportArray[i].equals(wordMultiple[j])) {
                     countDouble++;
                 }
             }
